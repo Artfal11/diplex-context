@@ -1,0 +1,1515 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background: url("../images/header/header-bg.png") top;
+  background-size: initial;
+  background-repeat: no-repeat;
+}
+
+.header-top {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav__item {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-right: 52px;
+}
+
+.header-nav__item:last-child {
+  margin: 0;
+}
+
+.header-contacts {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20vh;
+}
+
+.header-contacts__item {
+  padding-left: 27px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.header-nav-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5px;
+  z-index: 999;
+  height: 104vh;
+  width: 85%;
+  position: absolute;
+  right: -10%;
+  top: 50px;
+  background: #0099FF;
+}
+
+.header-nav-active .header-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-nav-active .header-nav__item {
+  font-family: "Ubuntu", sans-serif;
+  padding: 12px 0 12px 27px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.header-nav-active .header-nav__item:active {
+  background: #67C2EF;
+  color: #fff;
+}
+
+.header-nav-active .header-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-burger {
+  display: none;
+  position: absolute;
+  right: 30px;
+}
+
+.header-burger__line {
+  margin-left: 7px;
+  display: block;
+  z-index: 33;
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.header-burger__line:before, .header-burger__line:after {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-top: -11px;
+}
+
+.header-burger__line:after {
+  margin-top: 11px;
+  border: none;
+}
+
+.header-burger-active {
+  display: block;
+  position: absolute;
+  right: 70px;
+}
+
+.header-burger-active .header-burger__line {
+  position: absolute;
+  display: block;
+  z-index: 33;
+  width: 23px;
+  height: 0px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.header-burger-active .header-burger__line:before, .header-burger-active .header-burger__line:after {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  margin: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.header-burger-active .header-burger__line:after {
+  margin: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: none;
+}
+
+.header-btn {
+  padding: 19px 30px;
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 52px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.header-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-banner__info {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.header-banner__info_sub {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F3495C;
+  margin-bottom: 10px;
+}
+
+.header-banner__info_title {
+  margin-bottom: 23px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #008AFF;
+}
+
+.header-banner__info_text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  opacity: 0.6;
+  margin-bottom: 80px;
+}
+
+.header-banner__info_btn {
+  padding: 19px 52px;
+  background: #E8505B;
+  border-radius: 52px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.header-banner__image-wrap {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sub {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F3495C;
+}
+
+.title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  color: #008AFF;
+}
+
+.offers {
+  margin-bottom: 100px;
+}
+
+.offers-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offers-card {
+  padding: 24px 47px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.1);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.1);
+  border-radius: 10px;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.offers-card__image {
+  margin-bottom: 18px;
+}
+
+.offers-card__image_third {
+  margin-bottom: 48px;
+}
+
+.offers-card__title {
+  margin-bottom: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+}
+
+.offers-card__text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  opacity: 0.6;
+  margin-bottom: 38px;
+}
+
+.offers-card__text_third {
+  margin-bottom: 64px;
+}
+
+.btn {
+  background: #42A5F5;
+  border-radius: 52px;
+  padding: 22px 41px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.why {
+  margin-bottom: 100px;
+}
+
+.why-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.why-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.why-card__title {
+  margin-bottom: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+}
+
+.why-card__text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.promotion {
+  margin-bottom: 100px;
+}
+
+.promotion-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.promotion-image-in {
+  display: none;
+}
+
+.promotion-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.promotion-info__text {
+  margin-bottom: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.promotion-info__advantages {
+  margin-bottom: 50px;
+}
+
+.promotion-info__advantage {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.promotion-info__advantage span {
+  color: #F3495C;
+}
+
+.google {
+  margin-bottom: 100px;
+}
+
+.google-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.google-info__par {
+  margin-bottom: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.yandex {
+  margin-bottom: 100px;
+}
+
+.yandex-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.yandex-info__par {
+  margin-bottom: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.yandex-info__advantage {
+  margin-bottom: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.yandex-info__advantage span {
+  color: #F3495C;
+}
+
+.banner {
+  margin-bottom: 127px;
+  background: #42A5F5;
+}
+
+.banner-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner-info__title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 21px;
+}
+
+.banner-info__text {
+  margin-bottom: 80px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.banner-info__btn {
+  background: #FFFFFF;
+  border-radius: 52px;
+  padding: 22px 41px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #42A5F5;
+}
+
+.seo {
+  margin-bottom: 100px;
+}
+
+.seo-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.seo-top__info {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.seo-top__info_par {
+  margin-bottom: 25px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.seo-top__cards {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.seo-top__card {
+  margin-bottom: 46px;
+  -ms-flex-preferred-size: 46%;
+      flex-basis: 46%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.seo-top__image {
+  margin-right: 15px;
+}
+
+.seo-top__heading_title {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 118.9%;
+  color: #1F3F68;
+}
+
+.seo-top__heading_info {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.seo-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.seo-bottom__info_par {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.seo-bottom__info_par:nth-child(2) {
+  margin-bottom: 68px;
+}
+
+.exchange {
+  margin-bottom: 127px;
+  background: #42A5F5;
+}
+
+.exchange-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.exchange-info {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.exchange-title {
+  margin-bottom: 21px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.exchange-text {
+  margin-bottom: 58px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.exchange-btn {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #42A5F5;
+  padding: 22px 41px;
+  background: #FFFFFF;
+  border-radius: 52px;
+}
+
+.request {
+  margin-bottom: 100px;
+}
+
+.request-inner {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.request-comments {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.request-comments__title {
+  margin-bottom: 69px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.request-comments__title_quotes {
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #F46070;
+  width: 99px;
+  height: 99px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.request-comments__title_heading {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #008AFF;
+}
+
+.request-form {
+  margin: 50px auto 0 auto;
+  width: 50%;
+  padding: 54px 57px;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+}
+
+.swiper-container {
+  display: none;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.comment:nth-child(3) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.comment__title {
+  margin-bottom: 9px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 144.5%;
+  color: #1F3F68;
+}
+
+.comment__text {
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 144.5%;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.comment__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comment__author_image {
+  margin-right: 15px;
+}
+
+.comment__author_name {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 144.5%;
+  color: #1F3F68;
+}
+
+.comment__author_mail {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 144.5%;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.swiper__pagintation {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+  margin-right: 11px;
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 10px #42a5f5;
+          box-shadow: 2px 2px 10px #42a5f5;
+  border-radius: 52px;
+}
+
+.form-title {
+  margin-bottom: 50px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #008AFF;
+}
+
+.form-subtitle {
+  display: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 118.9%;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+
+.form-submit {
+  cursor: pointer;
+  height: 72px;
+  border: none;
+  outline: none;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #42A5F5;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 84px;
+  width: 100%;
+}
+
+.form-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.form-label__name {
+  margin-bottom: 8px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  opacity: 0.8;
+}
+
+.form-label__input {
+  outline: none;
+  padding: 21px 43px 21px 43px;
+  opacity: 0.4;
+  border: 1px solid #356EAD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 67px;
+}
+
+.form-label__textarea {
+  resize: none;
+  height: 144px;
+  outline: none;
+  padding: 21px 43px 21px 43px;
+  opacity: 0.4;
+  border: 1px solid #356EAD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 28px;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: #EBF6FF;
+}
+
+.footer-body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.5px solid #1F3F68;
+  padding-bottom: 30px;
+}
+
+.footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-nav__item {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1F3F68;
+  margin-right: 52px;
+}
+
+.footer-nav__item:last-child {
+  margin: 0;
+}
+
+.footer-btn {
+  padding: 15px 30px;
+  background: #67C2EF;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+
+.footer-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10px;
+}
+
+.footer-copy__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 160%;
+  color: #1F3F68;
+}
+
+.footer-copy__social {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    max-width: 960px;
+  }
+  .header-top {
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  .offers-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .offers-card {
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+    margin: 0 auto 30px 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .promotion-image {
+    display: none;
+  }
+  .promotion-image-in {
+    display: block;
+  }
+  .promotion-info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .google-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .yandex-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .banner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .banner-image {
+    display: none;
+  }
+  .banner-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .banner-info__btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .seo-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .exchange {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .exchange-image {
+    display: none;
+  }
+  .exchange-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .exchange-btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .header {
+    background: url("../images/header/main-bg-small.png") top;
+    background-size: 100% 180px;
+    background-repeat: no-repeat;
+  }
+  .header-nav__item {
+    margin-right: 15px;
+  }
+  .header-nav__item:last-child {
+    margin: 0;
+  }
+  .header-btn {
+    display: none;
+  }
+  .header-banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .seo-bottom__image {
+    display: none;
+  }
+  .seo-bottom__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .request-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .request-form {
+    width: 80%;
+  }
+  .footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .footer-btn-wrapper {
+    display: none;
+  }
+  .footer-nav__item {
+    margin-right: 15px;
+  }
+  .swiper-container {
+    display: block;
+  }
+  .comments {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .header {
+    background: url("../images/header/main-bg-small.png") top;
+    background-size: 100% 130px;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .header-top {
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  .header-banner__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .header-banner__info_sub {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .header-banner__info_title {
+    font-weight: 500;
+    font-size: 40px;
+  }
+  .header-banner__info_text {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+  .header-banner__info_btn {
+    display: none;
+  }
+  .header-burger {
+    display: block;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-links {
+    display: none;
+  }
+  .section-heading {
+    margin-bottom: 25px;
+  }
+  .sub {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .offers {
+    margin-bottom: 30px;
+  }
+  .offers-card {
+    -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.1);
+            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.1);
+    margin-bottom: 18px;
+  }
+  .why {
+    margin-bottom: 30px;
+  }
+  .why-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .why-card {
+    -ms-flex-preferred-size: 51%;
+        flex-basis: 51%;
+    margin: 0 auto 17px auto;
+  }
+  .why-card__title {
+    font-size: 16px;
+  }
+  .why-card__text {
+    font-size: 14px;
+  }
+  .promotion {
+    margin-bottom: 64px;
+  }
+  .promotion-info__text {
+    font-size: 14px;
+    line-height: 118.9%;
+  }
+  .promotion-info__advantage {
+    font-size: 14px;
+    line-height: 157.9%;
+  }
+  .google {
+    margin-bottom: 64px;
+  }
+  .google-info__par {
+    font-size: 14px;
+    line-height: 118.9%;
+  }
+  .yandex {
+    margin-bottom: 64px;
+  }
+  .banner {
+    margin-bottom: 64px;
+  }
+  .banner-info__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .banner-info__text {
+    font-size: 14px;
+    line-height: 118.9%;
+    margin-bottom: 30px;
+  }
+  .seo-top__info {
+    margin-bottom: 40px;
+  }
+  .seo-top__info_par {
+    font-size: 14px;
+    line-height: 118.9%;
+  }
+  .seo-top__heading_title {
+    font-size: 16px;
+    line-height: 118.9%;
+  }
+  .seo-top__heading_info {
+    font-size: 14px;
+    line-height: 118.9%;
+  }
+  .seo-top__card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .seo-bottom__info_par {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .exchange {
+    margin-bottom: 64px;
+  }
+  .exchange-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .exchange-text {
+    font-size: 14px;
+    line-height: 118.9%;
+  }
+  .request {
+    margin-bottom: 64px;
+  }
+  .request-comments {
+    margin-bottom: 112px;
+  }
+  .request-comments__title {
+    margin-bottom: 25px;
+  }
+  .request-comments__title_quotes {
+    width: 71px;
+    height: 71px;
+  }
+  .request-comments__title_heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .request-form {
+    margin-top: -50px;
+    width: 80%;
+  }
+  .form-title {
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+  }
+  .form-subtitle {
+    display: block;
+    margin-bottom: 37px;
+  }
+  .form-label__name {
+    display: none;
+  }
+  .form-label__input {
+    padding: 18px 0 18px 18px;
+  }
+  .form-label__textarea {
+    display: none;
+  }
+  .form-submit {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .request-form {
+    padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .footer-btn-wrapper {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: block;
+  }
+  .footer-logo {
+    margin-bottom: 25px;
+  }
+  .footer-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-nav__item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .footer-copy__text {
+    font-weight: 500;
+    font-size: 10px;
+  }
+  .footer-copy__social {
+    right: 0;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 85%;
+  }
+  .request-comments__title_heading {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .footer-btn {
+    padding: 12px 12px;
+  }
+}
